@@ -30,8 +30,8 @@ pipeline {
 
         stage('Docker Tagging') {
             steps {
-                bat 'docker tag web:latest prernathakur/web:latest'
-                bat 'docker tag mysql:8.0 prernathakur/mysql:8.0'
+                bat 'docker tag web:latest username/web:latest'
+                bat 'docker tag mysql:8.0 username/mysql:8.0'
             }
         }
 
@@ -51,8 +51,8 @@ pipeline {
 
         stage('Docker Push') {
             steps {
-                bat 'docker push prernathakur/web:latest'
-                bat 'docker push prernathakur/mysql:8.0'
+                bat 'docker push username/web:latest'
+                bat 'docker push username/mysql:8.0'
             }
         }
     }
